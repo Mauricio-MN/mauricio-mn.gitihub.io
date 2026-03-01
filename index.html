@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
+<html lang="pt-BR"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Maurício Moraes Nantes - Desenvolvedor Java</title>
@@ -26,19 +25,59 @@
     }
 
     header {
-        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
         margin-bottom: 40px;
+        text-align: left;
     }
 
-    header h1 {
+    .profile-pic {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 4px solid #00d4ff;
+        box-shadow: 0 0 25px rgba(0,212,255,0.6);
+        transition: 0.4s;
+    }
+
+    .profile-pic:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 40px rgba(0,212,255,1);
+    }
+
+    .profile-pic img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .header-text h1 {
         font-size: 2.5rem;
         margin: 0;
     }
 
-    header h2 {
+    .header-text h2 {
         font-weight: 300;
         color: #00d4ff;
         margin-top: 5px;
+    }
+
+    .links a {
+        display: inline-block;
+        margin-right: 15px;
+        text-decoration: none;
+        color: #00d4ff;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .links a:hover {
+        color: #fff;
+        text-shadow: 0 0 10px #00d4ff;
     }
 
     .card {
@@ -76,20 +115,6 @@
         font-weight: bold;
     }
 
-    .links a {
-        display: inline-block;
-        margin-right: 15px;
-        text-decoration: none;
-        color: #00d4ff;
-        font-weight: bold;
-        transition: 0.3s;
-    }
-
-    .links a:hover {
-        color: #fff;
-        text-shadow: 0 0 10px #00d4ff;
-    }
-
     footer {
         text-align: center;
         margin-top: 30px;
@@ -98,7 +123,12 @@
     }
 
     @media(max-width: 768px) {
-        header h1 {
+        header {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .header-text h1 {
             font-size: 1.8rem;
         }
     }
@@ -110,13 +140,23 @@
 <div class="container">
 
 <header>
-    <h1>Maurício Moraes Nantes</h1>
-    <h2>Desenvolvedor Java</h2>
-    <p>Email: mauriciomoraesnantes@gmail.com | Tel: (67) 9 9944-8478</p>
-    <div class="links">
-        <a href="https://github.com/Mauricio-MN" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/mauricio-moraes-nantes-168001240/" target="_blank">LinkedIn</a>
+
+    <div class="profile-pic">
+        <img src="https://media.licdn.com/dms/image/v2/D4D35AQFA4jN0BNZVuA/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1709237215166?e=1772931600&amp;v=beta&amp;t=bs6uV3GX65gsK3MXJb_7_zj-WduNpp-u2vKMve75F6E" alt="Maurício Moraes Nantes">
     </div>
+
+    <div class="header-text">
+        <h1>Maurício Moraes Nantes</h1>
+        <h2>Desenvolvedor Java</h2>
+        <p>Email: mauriciomoraesnantes@gmail.com<br>
+        Tel: (67) 9 9944-8478</p>
+
+        <div class="links">
+            <a href="https://github.com/Mauricio-MN" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/mauricio-moraes-nantes-168001240/" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+
 </header>
 
 <div class="card">
@@ -150,7 +190,7 @@
     <h3>Projetos em Destaque</h3>
     <ul>
         <li><strong>PPessoas-API:</strong> API REST em Spring Boot para gerenciamento de pessoas.</li>
-        <li><strong>CHROMADDED-VOIP:</strong> Projeto VOIP 3D com protocolo UDP (Java & C++).</li>
+        <li><strong>CHROMADDED-VOIP:</strong> Projeto VOIP 3D com protocolo UDP (Java &amp; C++).</li>
         <li><strong>RestaUm:</strong> Solver em Java utilizando recursão.</li>
         <li><strong>PostOrderSearch:</strong> Exercício de lógica sobre árvore pós-ordenada.</li>
     </ul>
@@ -184,6 +224,9 @@
 </footer>
 
 </div>
+
+
+</body></html>
 
 </body>
 </html>
